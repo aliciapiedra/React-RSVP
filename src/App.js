@@ -24,6 +24,12 @@ class App extends Component {
 		this.setState({ guests })
 	}
 
+	addGuest = name => {
+		const { guests } = this.state 
+		guests.push({name: name, id: guests.length, isConfirmed: false, isEditing: false})
+		this.setState({ guests })
+	}
+
 	render() {
 		const { guests, isFiltered } = this.state
 		const guestList = guests.reduce((acc, guest) => {
