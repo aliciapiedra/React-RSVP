@@ -1,7 +1,7 @@
 import React from 'react';
 import GuestName from './GuestName';
 
-const Guest = ({ guest, toggleGuestProperty, handleChangeName }) => (
+const Guest = ({ guest, toggleGuestProperty, handleChangeName, removeGuest }) => (
     <li>
         <GuestName isEditing={guest.isEditing} handleChangeName={e => handleChangeName(e.target.value)}>{guest.name}</GuestName>
         <label>
@@ -12,7 +12,7 @@ const Guest = ({ guest, toggleGuestProperty, handleChangeName }) => (
             Confirmed
         </label>
         <button onClick={toggleGuestProperty('isEditing', guest.id)}>{ guest.isEditing ? 'Save' : 'Edit'}</button>
-        <button>remove</button>
+        <button onClick={removeGuest}>remove</button>
     </li>
 )
 

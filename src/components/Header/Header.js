@@ -1,10 +1,10 @@
 import React from 'react'
 import GuestForm from './GuestForm'
 
-const Header = props => (
+const Header = ({ guestName, addGuest, handleNewGuestName }) => (
     <header>
         <h1>RSVP</h1>
-        <GuestForm />
+        <GuestForm guestName={guestName} addGuest={addGuest} handleNewGuestName={handleNewGuestName}/>
     </header>
 )
 

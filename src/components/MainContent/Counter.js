@@ -1,19 +1,19 @@
 import React from 'react';
 
-const Counter = props => (
+const Counter = ({ numberUnconfirmed, totalInvited, numberAttending })=> (
     <table className="counter">
         <tbody>
             <tr>
                 <td>Attending:</td>
-                <td>attending</td>
+                <td>{numberAttending}</td>
             </tr>
             <tr>
                 <td>Unconfirmed:</td>
-                <td>unconfirmed guests</td>
+                <td>{numberUnconfirmed}</td>
             </tr>
             <tr>
                 <td>Total:</td>
-                <td>total invited</td>
+                <td>{totalInvited}</td>
             </tr>
         </tbody>
     </table>

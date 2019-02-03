@@ -5,11 +5,15 @@ import PendingGuest from './PendingGuest'
 const GuestList = ({
   guestList,
   toggleGuestProperty,
-  handleChangeName
+  handleChangeName,
+  guestName,
+  removeGuest
 }) => (
     <ul>
+      <PendingGuest guestName={guestName} />
       { guestList.map(g =>
         <Guest
+          removeGuest={() => removeGuest(g.id)}
           handleChangeName={text => handleChangeName(text, g.id)}
           toggleGuestProperty={toggleGuestProperty} 
           guest={g}

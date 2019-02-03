@@ -9,15 +9,22 @@ const Main = ({
   toggleFilter,
   guestList,
   toggleGuestProperty,
-  handleChangeName
+  handleChangeName,
+  guestName,
+  removeGuest,
+  totalInvited,
+  numberAttending,
+  numberUnconfirmed
 }) => (
     <div className="main">
         <ConfirmedFilter
           toggleFilter={toggleFilter}
           isFiltered={isFiltered}
            />
-        <Counter />
+        <Counter numberUnconfirmed={numberUnconfirmed} numberAttending={numberAttending} totalInvited={totalInvited}/>
         <GuestList
+          removeGuest={removeGuest}
+          guestName={ guestName }
           toggleGuestProperty={toggleGuestProperty}
           isFiltered={isFiltered}
           guestList={guestList}
